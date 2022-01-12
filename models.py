@@ -6,10 +6,10 @@ from math import floor
 from dotenv import load_dotenv
 
 load_dotenv()
-name = os.environ.get("DB_NAME")
-host = os.environ.get("DB_HOST")
-user = os.environ.get("DB_USER")
-pw = os.environ.get("DB_PW")
+name = os.environ.get("HEROKU_DB_NAME")
+host = os.environ.get("HEROKU_HOST")
+user = os.environ.get("HEROKU_USER")
+pw = os.environ.get("HEROKU_PW")
 path = f"postgresql://{user}:{pw}@{host}/{name}"
 db = SQLAlchemy()
 
