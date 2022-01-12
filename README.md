@@ -4,7 +4,7 @@
 This is the capstone project for Udacity Full Stack Developer ND program. It follows the "Casting Agency" specifications.
 
 ## URL
-You can click on this link to go to live project page: insert link here!!!
+You can click on this link to go to live project page: https://capstonefamoso.herokuapp.com/
 
 ## Authentication information
 
@@ -53,6 +53,7 @@ Below are all of the individual permissions available. They are fairly self expl
 ## For local deploys
 
 ### Clone the repo from github
+https://github.com/oearikan/05_capstone.git
 
 ### Virtual environment
 cd into cloned project directory and create a virtual environment.
@@ -79,3 +80,13 @@ For local deploys:
 ### Launch the app
 ```export FLASK_APP=app.py``` and then ```flask run```
 
+### Testing
+- test_app.py files tries to connect to the local db (credentials for which are given in .env file )
+- To test the app locally please create a database called <capstone> and populate with initial data.
+    ```psql -U postgres``` (password for postgres user is "sa")
+    ```create database capstone``` (to create the database)
+    ```\i capstone.sql``` (to populate with some initial data)
+    Then come back to root of the project and run ```python -m test_app```
+
+### Testing live app on heroku
+- For your convenience a postman collection was provided to test the endpoints on the heroku deployed version. The link to the heroku app is: https://capstonefamoso.herokuapp.com/

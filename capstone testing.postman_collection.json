@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "8b58f305-2e00-4abb-93dd-9deb99ba59f9",
+		"name": "capstone testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hello app",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all actors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new actor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test Actor\",\r\n    \"birthdate\": \"1984-01-24\",\r\n    \"gender\": \"m\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/actors",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete single actor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/actors/13",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit not existing actor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/actors/14",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit single actor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Onder Emre Arikan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/actors/14",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tester\",\r\n    \"year\": 2022\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete single movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies/9",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit non existing movie",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies/999",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit single movie",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Valid Tester\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies/9",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies of an actor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/actors/1/movies",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"actors",
+						"1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actors starring in a movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies/1/actors",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"1",
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "associate actors and movies",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies/3/14",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove actor from a movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://capstonefamoso.herokuapp.com/movies/3/14",
+					"protocol": "https",
+					"host": [
+						"capstonefamoso",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRSZlBBdGZJWDBsRjZYSHd4SXFJWCJ9.eyJpc3MiOiJodHRwczovL29lYXdvcmtzLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MWQ4Mjc2NzdlNmFjNTAwNjk0MTAzZGYiLCJhdWQiOiJhY3RvcnNubW92aWVzIiwiaWF0IjoxNjQyMDExMTUxLCJleHAiOjE2NDIwODMxNTEsImF6cCI6IkN3eFlPSEpvNDNJSHJIb01rV3hwampHcGczajVTN1h5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJhZGQ6YWN0b3IiLCJhZGQ6bW92aWUiLCJkZWxldGU6YWN0b3IiLCJkZWxldGU6bW92aWUiLCJlZGl0OmFjdG9yIiwiZWRpdDptb3ZpZSIsImxpbms6aXRlbXMiLCJ2aWV3OmFjdG9ycyIsInZpZXc6bW92aWVzIl19.T65ey3xnCczD0KFwDv_17wFXKueKsdrZAYi7PQ3Nw0YfZMlcMLoaHMQG7pAP9oMVAnYWGb8yosbja9L7zIEBNPSzLgyZEGxO9TVeJX3EDNcnRmcBxoHyjwiubWe0RBrPPfqup3PgNyZ9qDjE1Vlg8Jg-TUbcmVVGI4z-FkUpLhO8B3_Eg-9kZgZnlG1a645iFvRPtxEwfV4kSx5SdJaeE4KZPGZ9_ElZZsWQZUr2OUr-FETCevxgqrH-ySmLzlEUnDxEGmyLt_29Q9iYcRI5J5HdXPL2I5AwsUrF2UtaYUi7LnsNXyJzO1fGlmMf9DrBX7nMSoQkX7qEsa8KfjFISQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
